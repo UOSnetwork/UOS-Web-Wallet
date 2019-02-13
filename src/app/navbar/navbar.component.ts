@@ -94,47 +94,54 @@ export class NavbarComponent {
 
     this.networks = []
     this.networks.push(new Network(
-      'eos.greymass.com',
-      'Mainnet (Greymass)',
-      NetworkChaindId.MainNet,
-      443,
-      NetworkProtocol.Https
-    ))
-    this.networks.push(new Network(
-      'api.eosnewyork.io',
-      'Mainnet (EOS New York)',
-      NetworkChaindId.MainNet,
-      443,
-      NetworkProtocol.Https
-    ))
-    this.networks.push(new Network(
-      'api.eosn.io',
-      'Mainnet (EOS Nation)',
-      NetworkChaindId.MainNet,
-      443,
-      NetworkProtocol.Https
-    ))
-    this.networks.push(new Network(
-      'api.franceos.fr',
-      'Mainnet (Franceos)',
-      NetworkChaindId.MainNet,
-      443,
-      NetworkProtocol.Https
-    ))
-    this.networks.push(new Network(
-      'jungle.eosio.cr',
-      'Jungle (Costa Rica)',
-      NetworkChaindId.Jungle,
-      443,
-      NetworkProtocol.Https
-    ))
-    this.networks.push(new Network(
-      'jungle2.cryptolions.io',
-      'Jungle (Cryptolines)',
-      NetworkChaindId.Jungle,
-      443,
-      NetworkProtocol.Https
-    ))
+      'UOS Networks',
+      '(u.community)',
+      NetworkChaindId.UOS,
+      8888,
+      NetworkProtocol.Http
+    ))    
+    // this.networks.push(new Network(
+    //   'eos.greymass.com',
+    //   'Mainnet (Greymass)',
+    //   NetworkChaindId.MainNet,
+    //   443,
+    //   NetworkProtocol.Https
+    // ))
+    // this.networks.push(new Network(
+    //   'api.eosnewyork.io',
+    //   'Mainnet (EOS New York)',
+    //   NetworkChaindId.MainNet,
+    //   443,
+    //   NetworkProtocol.Https
+    // ))
+    // this.networks.push(new Network(
+    //   'api.eosn.io',
+    //   'Mainnet (EOS Nation)',
+    //   NetworkChaindId.MainNet,
+    //   443,
+    //   NetworkProtocol.Https
+    // ))
+    // this.networks.push(new Network(
+    //   'api.franceos.fr',
+    //   'Mainnet (Franceos)',
+    //   NetworkChaindId.MainNet,
+    //   443,
+    //   NetworkProtocol.Https
+    // ))
+    // this.networks.push(new Network(
+    //   'jungle.eosio.cr',
+    //   'Jungle (Costa Rica)',
+    //   NetworkChaindId.Jungle,
+    //   443,
+    //   NetworkProtocol.Https
+    // ))
+    // this.networks.push(new Network(
+    //   'jungle2.cryptolions.io',
+    //   'Jungle (Cryptolines)',
+    //   NetworkChaindId.Jungle,
+    //   443,
+    //   NetworkProtocol.Https
+    // ))
 
     if (this.userNetworks) {
       this.userNetworks.forEach(network => {
