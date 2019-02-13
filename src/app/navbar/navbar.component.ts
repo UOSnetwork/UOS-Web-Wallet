@@ -94,8 +94,8 @@ export class NavbarComponent {
 
     this.networks = []
     this.networks.push(new Network(
-      'UOS Networks',
-      '(u.community)',
+      'explorer.u.community',
+      'UOS Networks (u.community)',
       NetworkChaindId.UOS,
       8888,
       NetworkProtocol.Http
