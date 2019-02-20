@@ -2,7 +2,7 @@
 
 :host ::ng-deep .slider-wrapp {
   position: relative;
-  background-color: #aabfe0;
+  background-color: $white;
   overflow: hidden;
 
   &.disabled{
@@ -20,7 +20,7 @@
         width: 100%;
         padding: 14px 25px 12px 25px;
         font-family: $ff_title;
-        color:  $white;
+        color:  $gray;
         text-decoration: none;
         text-align: center;
         font-weight: $fw_bold;
@@ -28,10 +28,12 @@
         white-space: nowrap;
         &.active-link {
           background-color: $white;
-          color: $black;
+          color: #d8352f;
+	  border-bottom: solid 2px #d8352f;
         }
         &.activated {
           background-color: $white;
+	  color: #d8352f;
         }
         p {
           margin-bottom: 0;

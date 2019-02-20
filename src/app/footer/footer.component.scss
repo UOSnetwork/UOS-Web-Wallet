@@ -30,13 +30,13 @@ $footer_m_h: 13px;
 
       .mat-icon,
       .copyright {
-        color: $blue;
+        color: $black;
       }
     }
 
     .body-footer {
-      color: $blue;
-      font-size: $fz;
+      color: $black;
+      font-size: $fz_v_small;
       text-align: justify;
       .info-text {
         margin: $footer_m_h 0 0;
