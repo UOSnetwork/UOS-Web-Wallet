@@ -1,10 +1,10 @@
-$ff: 'Open Sans';
-$ff_title: 'Source Sans Pro';
-$ff_consolas: 'Consolas';
+$ff: 'Montserrat', sans-serif;
+$ff_title: 'Montserrat', sans-serif;
+$ff_consolas: 'Montserrat', sans-serif;
 
 $white: #fff;
 $white_with_blue: #fefeff;
-$red: red;
+$red: #d8352f;
 $black: #000;
 $brown: #C0A387;
 $brown_lite: #8A8A8A;
@@ -12,8 +12,9 @@ $blue: #567fc3;
 $dark: #303030;
 $purple: #e1ebf9;
 $sepia: #8e8e8e;
+$gray: gray;
 
-$light_blue_bg: #f2f8ff;
+$light_blue_bg: #ffffff;
 $dark_input: #5d5f60;
 $btn_bg: $brown;
 $tc: #303030;
@@ -24,8 +25,10 @@ $card_disabled_bg: #f4f4f4;
 $card_disabled_color: #8d8d8e;
 $input_file_disabled_color: #d1d1d1;
 
-$block_shadow: 0px 0px 74px 2px rgba(157, 177, 233, 0.4);
-$block_shadow_top: 0px -64px 70px 2px rgba(157, 177, 233, 0.4);
+// $block_shadow:     0px 0px 74px 2px rgba(157, 177, 233, 0.4);
+// $block_shadow_top: 0px -64px 70px 2px rgba(157, 177, 233, 0.4);
+$block_shadow:     0px 0px 20px rgba(184, 184, 184, 0.25);
+$block_shadow_top: 0px 0px 20px rgba(184, 184, 184, 0.25);
 
 $tt: 0.4s;
 

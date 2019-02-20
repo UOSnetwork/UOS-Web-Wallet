@@ -8,24 +8,25 @@
 .submit {
   font-family: $ff_title !important;
   color: $white !important;
-  text-transform: uppercase;
-  background-color: $btn_bg !important;
+//  text-transform: uppercase;
+//  background-color: $btn_bg !important;
+  background-color: $red !important;
 
 }
 
 :host /deep/ .mat-button-toggle-checked {
   outline: none !important;
-  background-color: $btn_bg !important;
+  background-color: $red !important;
   color: $white !important;
 }
 
 .mat-raised-button, .mat-button {
-  border-radius: 0;
+  border-radius: 5px;
   outline: none;
 }
 
 .mat-button-toggle-button {
-  color: $red;
+  color: $btn_bg;
 }
 
 
@@ -35,12 +36,13 @@ mat-button-toggle-group {
 }
 
 mat-button-toggle {
-  border: 1px solid $btn_bg;
+  border: 1px solid $white;
+  border-radius: 5px;
   
   &.mat-button-toggle-disabled {
     cursor: default;
-    border: 1px solid $sepia !important;
-    color: $dark_input;
+    border: 1px solid $white !important;
+    color: $btn_bg;
 
     &.mat-button-toggle-checked  {
       background-color: $sepia !important;
@@ -52,5 +54,5 @@ mat-button-toggle {
 .grey-button {
   background-color: $sepia !important;
   color: $white;
-  text-transform: uppercase;
+//  text-transform: uppercase;
 }
