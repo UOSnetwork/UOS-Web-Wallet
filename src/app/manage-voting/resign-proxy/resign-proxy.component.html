@@ -1,4 +1,4 @@
-<div class="window-container shadow-container" [ngClass]="{'unlogin-row-wrapp': !loginService.loggedIn()}">
+<div class="window-container" [ngClass]="{'unlogin-row-wrapp': !loginService.loggedIn()}">
   <div class="row">
     <form class="col-lg-5 col-md-12 unlogin-w-100" #f="ngForm" (ngSubmit)="f.form.valid && resign()">
       <div class="title">
