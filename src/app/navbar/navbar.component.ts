@@ -94,12 +94,12 @@ export class NavbarComponent {
 
     this.networks = []
     this.networks.push(new Network(
-      'explorer.uos.network',
-      'U°OS Networks (u.community)',
+      'history.uos.network',
+      'U°OS Network',
       NetworkChaindId.UOS,
-      8889,
+      7889,
       NetworkProtocol.Https
-    ))    
+    ))
     // this.networks.push(new Network(
     //   'eos.greymass.com',
     //   'Mainnet (Greymass)',
