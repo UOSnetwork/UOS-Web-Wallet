@@ -6,7 +6,7 @@
     </div>
     <div class="info-block">
       <div class="dropdown-wrapp my-auto">
-        <mat-form-field class="dropdown white no-padding">
+        <mat-form-field class="dropdown no-padding">
           <mat-select [(ngModel)]="selectedNetwork" name="network">
             <mat-option *ngFor="let network of networks; let i = index"
                         [value]="network.host"
@@ -20,7 +20,7 @@
       </div>
 
       <div class="dropdown-wrapp my-auto">
-        <mat-form-field class="dropdown white no-padding">
+        <mat-form-field class="dropdown no-padding">
           <mat-select [(ngModel)]="selectedLanguage" name="lang" (selectionChange)="langChanged()">
             <mat-option *ngFor="let lang of languages" [value]="lang.value">
               {{lang.viewValue}}
@@ -29,23 +29,8 @@
         </mat-form-field>
       </div>
 
-      <div *ngIf="displayLogOut()" class="logo-wrapp dropdown" [ngSwitch]="loginIcon" data-toggle="dropdown">
-
-        <img *ngSwitchCase="'scatter'" src="../assets/images/scatter_ochre.png" class="logo scatter" />
-        <img *ngSwitchCase="'eos-plugin'" src="../assets/images/eos_plugin_ochre.png" class="logo eos" />
-        <img *ngSwitchCase="'publicKey'" src="../assets/images/key2_ochre.png" class="logo key" />
-        <img *ngSwitchCase="'ledger'" src="../assets/images/ledger_ochre.png" class="logo ledger" />
-        <ng-template ngSwitchDefault>
-          <img src="../assets/images/logo.png" class="logo" />
-        </ng-template>
-
-        <div class="dropdown-menu">
-          <div class="row dropdown-item ml-0 mr-0" *ngIf="displayLogOut()">
-            <a (click)="logout()">{{'main-navbar.sign-out' | translate}}
-              <mat-icon svgIcon="sign-out-icon" class="ml-1"></mat-icon>
-            </a>
-          </div>
-        </div>
+      <div *ngIf="displayLogOut()">
+        <a (click)="logout()">{{'main-navbar.sign-out' | translate}}</a>
       </div>
 
       <button class="navbar-toggler" (click)="toggleNav = !toggleNav">

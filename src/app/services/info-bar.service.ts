@@ -52,12 +52,14 @@ export class InfoBarService implements OnInit, OnDestroy {
   })
 
   ngOnInit () {
-    if (this.isLoggedIn !== LoginState.out) {
+    if (this.isLoggedIn !== LoginState.out && this.accountName) {
       this.getInfo(this.accountName)
     }
   }
 
   getInfo (AccountName: string) {
+    if (!AccountName) return
+
     if (!this.lastChainid) {
       this.lastChainid = this.currentchainid
     } else {

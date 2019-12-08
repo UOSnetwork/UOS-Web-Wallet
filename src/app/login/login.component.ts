@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core'
 import * as CryptoJS from 'crypto-js'
 import * as Eos from 'eosjs'
 import { LocalStorage, LocalStorageService } from 'ngx-webstorage'
-import { FactoryPluginService, ScatterService, LoginService, ConfigService, AccountService, CryptoService, GAnalyticsService } from '../services'
+import { FactoryPluginService, ScatterService, LoginService, ConfigService, AccountService, CryptoService } from '../services'
 import { LoginState } from '../models/login-state.model'
 import { LoginKeys } from '../models/login-keys.model'
 import { SelectAccountDialogComponent } from '../dialogs/select-account-dialog/select-account-dialog.component'
@@ -90,8 +90,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     private cryptoService: CryptoService,
     private storage: LocalStorageService,
     public loginService: LoginService,
-    private translations: TranslateService,
-    private gAnalyticsService: GAnalyticsService
+    private translations: TranslateService
   ) {
 
     this.storage.observe('currentnetwork').subscribe(() => {
@@ -196,12 +195,10 @@ async SelectNameAndPermission(publicKey: string){
         return
       }
 
-      this.gAnalyticsService.gtagEvent('02_log_in', 'connect_account', 'Ledger')
-
       this.accountName = this.model.accountName
       this.permission = this.model.permission
       this.isLoggedIn = LoginState.ledger
-  
+
       this.loginInProcess = false
       this.lastIdNetwork = this.selectedIdNetwork
       this.navigateAfterLogin()
@@ -233,7 +230,7 @@ async SelectNameAndPermission(publicKey: string){
       let message = await this.translations.get(`dialogs.eos-plugin-unlock-message`).toPromise()
       await currentPlugin.login().catch(function(err) {
         if (err == undefined) {
-          throw ({code:423, 
+          throw ({code:423,
             message:message
         });
       }
@@ -282,7 +279,6 @@ async SelectNameAndPermission(publicKey: string){
         activeGAnalytic: true,
         title: await this.translations.get('dialogs.open-info').toPromise()
       }
-      this.gAnalyticsService.gtagEvent('02_modal_impr', 'connect_account', 'scatter')
       let dialogRef = this.dialog.open(InfoDialogComponent, dialogConfig)
     })
   }
@@ -414,8 +410,6 @@ async SelectNameAndPermission(publicKey: string){
       this.pass = this.passBase64
       this.hashedPass = hashedPass
     }
-
-    this.gAnalyticsService.gtagEvent('02_log_in', 'connect_account', 'private_key')
 
     this.isLoggedIn = LoginState.publicKey
     this.remember = this.model.remember

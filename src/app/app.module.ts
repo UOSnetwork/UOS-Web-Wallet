@@ -34,7 +34,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 
 import { DateCheckPipe } from './pipes'
 import { GAnalyticsDirective } from './directive/g-analytics.directive'
-import { AuthGuardService, ScatterService, FactoryPluginService, EosPluginService, ConfigService, AccountService, CryptoService, EosService, InformationService, InfoBarService, GAnalyticsService } from './services'
+import { AuthGuardService, ScatterService, FactoryPluginService, EosPluginService, ConfigService, AccountService, CryptoService, EosService, InformationService, InfoBarService } from './services'
 
 import { SuccessDialogComponent,
   FailureDialogComponent,
@@ -506,7 +506,6 @@ const appRoutes: Routes = [
     CryptoService,
     EosService,
     ConfigService,
-    GAnalyticsService,
     { provide: APP_INITIALIZER,
       useFactory: initializeApp,
       deps: [ConfigService], multi: true },

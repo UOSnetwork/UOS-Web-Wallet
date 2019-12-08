@@ -430,8 +430,8 @@
     "claim": "claim"
   },
   "main-navbar":{
-    "title": "U°OS Web Wallet",
-    "send-eos": "Send UOS and Tokens",
+    "title": "Web Wallet",
+    "send-eos": "Send UOS",
     "gen-key-pair": "Generate Key Pairs",
     "manage-acc": "Manage Account",
     "manage-voit": "Manage Voting",
