@@ -142,9 +142,9 @@ export class InfoBarService implements OnInit, OnDestroy {
                 }
               })
             } else {
-              this.data.getAllTokensInfo(tokenList.tokens, AccountName).subscribe((tokens) => {
-                this.tokenStringTemp = this.setTokensSymbol(tokens)
-              })
+              //this.data.getAllTokensInfo(tokenList.tokens, AccountName).subscribe((tokens) => {
+              //  this.tokenStringTemp = this.setTokensSymbol(tokens)
+              //})
             }
             this.stacked = this.accountInfo.voter_info.staked / 10000
             this.accountInfo.cpu_stacked = this.accountInfo.total_resources.cpu_weight
