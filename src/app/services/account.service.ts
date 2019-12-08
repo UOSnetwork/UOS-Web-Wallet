@@ -100,7 +100,7 @@ export class AccountService {
 
   getCurrentCourse (): Observable<any> {
     let custHeaders = new HttpHeaders().set('Referrer-Policy', 'no-referrer')
-    return this.httpClient.get('https://api.coingecko.com/api/v3/coins/eos').pipe(
+    return this.httpClient.get('https://api.coingecko.com/api/v3/coins/u-os-network').pipe(
       catchError(err => {
         return of(false)
       })
