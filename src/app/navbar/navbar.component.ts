@@ -94,10 +94,10 @@ export class NavbarComponent {
 
     this.networks = []
     this.networks.push(new Network(
-      'history.uos.network',
+      'api.uos.network',
       'U°OS Network',
       NetworkChaindId.UOS,
-      7889,
+      443,
       NetworkProtocol.Https
     ))
     // this.networks.push(new Network(
